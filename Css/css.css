@@ -1,0 +1,546 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: url("../Images/plane.jpg");
+  background-color: #e3e9e9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-color 0.5s;
+  /* position: absolute; */
+}
+@media screen and (max-height: 450px) {
+  .body {
+    padding-top: 15px;
+  }
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgb(2, 1, 1); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.dropdownstyle {
+  color: #0a0a0a;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
+  transition-duration: 0.4s;
+  float: left;
+}
+
+.btn1 {
+  background-color: grey;
+  color: black;
+  border: 2px solid black;
+  width: 40px;
+  height: 60px;
+  float: left;
+}
+.time {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: #e3f1fd8e;
+  display: block;
+  transition: 0.3s;
+  float: right;
+}
+
+.main {
+  background: rgb(211, 116, 116);
+  padding-top: 0px;
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  height: 120px;
+  width: auto;
+  border-radius: 0;
+  position: fixed;
+}
+
+.footer {
+ /* styling footer bar */
+  position: fixed;
+  left: 0px;
+  /* border: 2.5px solid #7fa998;  */
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  margin-top: 100px;
+  background-color: none;
+  text-align: center;
+  box-sizing: border-box;
+  /* display:flex ; */
+}
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .footer {
+    /* padding-top: 200px; */
+    width: 100%;
+    /* display: flex; */
+  }
+}
+
+.pcopy {
+  /*defining footer text*/
+  font-size: 14px;
+  padding-left: 30px;
+  font-family: arial;
+  float: left;
+}
+
+.social-icon {
+  /*styling icon of footer*/
+  padding-right: 6px;
+  padding-top: 9px;
+  float: right;
+}
+.noticeboard {
+  font-size: 15px;
+  padding-left: 30px;
+  font-family: Comic sans MS;
+  display: inline-block;
+  top: 10px;
+  /* background-color: green; */
+}
+
+.contents {
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.flightsdetails {
+  padding-top: 100px;
+  padding-left: 50px;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgb(49, 49, 58);
+  font-family: Comic sans MS;
+}
+
+.flight {
+  font-family: Comic sans MS;
+  border-collapse: collapse;
+  width: 45%;
+  height: auto;
+}
+
+.flight td {
+  border: 5px solid #ddd;
+  padding: 5px;
+  color: rgb(8, 22, 22);
+}
+.flight th {
+  padding: absolute;
+  font-size: 25px;
+}
+
+.flight tr:hover {
+  background-color: #ddd;
+}
+
+.flight th {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #080808;
+  color: rgb(199, 155, 73);
+}
+
+.image__div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.image {
+  float: right;
+  width: 30%;
+  height: 500px;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.buttons1 {
+  /* styling button 1 of home page*/
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.button-index {
+  /* styling 3 buttons of home page*/
+  transition-duration: 0.4s;
+  background-color: #6ed4ab;
+  padding: 15px 32px;
+  font-family: arial;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 12px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  box-shadow: 0 9px #999;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* @media screen and (max-width: 1283px) {
+  .buttons1 {
+    top: 80%;
+  }
+} */
+
+.button-index:hover {
+  /* mouse over button styling */
+  background-color: #f4eec7;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  font-style: italic;
+  opacity: 0.5;
+  color: #000000;
+}
+
+.button-index:active {
+  /*after selecting the buttons styling*/
+  background-color: #3a793c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.slogan {
+  padding-top: 170px;
+  font-family: Comic sans MS;
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.icon {
+  height: 19px;
+  width: auto;
+  padding: 3px;
+  float: right;
+}
+.image2 {
+  float: right;
+  width: 30%;
+  height: auto;
+  border-radius: 20px;
+  position: fixed;
+}
+
+.contact {
+  /*styling contact form*/
+  padding-top: 90px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+textarea,
+input[type="email"],
+input[type="text"] {
+  /*styling text area of contact form*/
+  width: 50%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  border: 1px #ccc;
+}
+
+.button3 {
+  /*styling the layout of buttons of home page*/
+  transition-duration: 0.4s;
+  background-color: #6ed4ab;
+  padding: 10px 25px;
+  font-family: arial;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  box-shadow: 0 9px #999;
+}
+
+.button3:hover {
+  background-color: #999;
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  /* border: 3px solid #f1f1f1; */
+  z-index: 9;
+  width: 450px;
+  height: auto;
+  border: #134b5f;
+  border-spacing: 10px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 100%;
+  /* padding: 15px; */
+  background-color: #2596be;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+
+.headertext {
+  font-size: 50px;
+  font-family: "Courier New", Courier, monospace;
+  color: #6ed4ab;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+}
+.fromselect {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #134b5f;
+  color: white;
+  overflow: hidden;
+  border-radius: 0.25em;
+  /* bottom: 20px; */
+  float: right;
+  font-size: 15px;
+}
+
+.toselect {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #134b5f;
+  color: white;
+  overflow: hidden;
+  border-radius: 0.25em;
+  /* bottom: 20px; */
+  float: right;
+  font-size: 15px;
+}
+.f {
+  font-size: 35px;
+  font-family: "Courier New", Courier, monospace;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.g {
+  font-size: 40px;
+  font-family: "Courier New", Courier, monospace;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.formtext {
+  font-size: 40px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.btnsearch {
+  padding-left: 40%;
+  padding-bottom: 20px;
+}
+.btnclose {
+  padding-left: 40%;
+}
+.btn {
+  transition-duration: 0.4s;
+  background-color: #6ed4ab;
+  padding: 10px 25px;
+  font-family: arial;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  box-shadow: 0 9px #999;
+}
+
+.btncancel {
+  transition-duration: 0.4s;
+  background-color: #d46e6e;
+  padding: 10px 25px;
+  font-family: arial;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  box-shadow: 0 9px #999;
+}
+.btncancel:hover {
+  background-color: #afbdc2;
+}
+.btn:hover {
+  background-color: #afbdc2;
+}
+
+.aboutus {
+  padding-top: 150px;
+}
+
+@media only screen and (max-width: 740px) {
+  /* For mobile phones: */
+  .image {
+    float: left;
+    margin-left: 4rem;
+  }
+  .flightsdetails h1 {
+    margin-left: 3.2rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  /* For mobile phones: */
+  .flight {
+    margin-left: -2rem;
+    /* background-color: red; */
+  }
+}
+@media only screen and (max-width: 495px) {
+  /* For mobile phones: */
+  .flight {
+    margin-left: -4rem;
+    /* background-color: red; */
+  }
+  .image {
+    float: left;
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (min-width: 340px) {
+  .buttons1 {
+    top: 76rem;
+  }
+}
+@media screen and (min-width: 741px) {
+  .buttons1 {
+    top: 42rem;
+  }
+}
+@media screen and (min-width: 1179px) {
+  .buttons1 {
+    top: 35rem;
+  }
+}
+@media screen and (min-width: 1291px) {
+  .buttons1 {
+    top: 30rem;
+  }
+}
+
+/* @media only screen and (max-width: 1200px) {
+  /* For mobile phones: */
+  /* .buttons1 {
+    top: 30rem;
+  } */
+
+
+@media screen and (min-width: 340px) {
+  .button3 {
+    top: 76rem;
+  }
+}
+@media screen and (min-width: 741px) {
+  .button3 {
+    top: 42rem;
+  }
+}
+@media screen and (min-width: 1179px) {
+  .button3 {
+    top: 35rem;
+  }
+}
+@media screen and (min-width: 1291px) {
+  .button3 {
+    top: 30rem;
+  }
+}
+
+

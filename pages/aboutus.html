@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset = "UTF-8">
+
+	<title>Contact</title>
+
+  <style>
+    
+    body {
+      background-image: url('plane.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
+
+
+
+	<!-- linking css -->
+	<link rel = "stylesheet" href = "../Css/css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../Javascript/js.js"></script>
+</head>
+
+<body>
+	<div class="navbar">
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="../index.html">Home</a>
+			<a href="contact.html">Contact Us</a>
+			
+			
+		  </div>
+	</div>
+	<div class="main" id="main" >
+		<!-- <button class ="btn1" onclick="openNav()"><i class="fa fa-bars" style="font-size:30px"></i></button> -->
+		  <span class="dropdownstyle" onclick="openNav()" ondblclick="closeNav()"><i class="fa fa-bars" style="font-size:24px"></i></span>
+		  <marquee class="noticeboard" behavior="scroll" direction="left">Notice: All the flights for Magh 2, 2079 has been suspended in the memory of the 72 passangers who were onboard at the crash at the pokhara. </marquee>
+		  <p class="time" id="time"></p>
+							 <script>
+							  function currentDate(){
+							  document.getElementById("time").innerHTML = new Date();
+							  setTimeout(currentDate)
+							  }
+							  currentDate()
+						  </script> 
+		
+	</div>
+<div class="aboutus">
+    <h1>This page is under construction <a href="../Index.html">Go Back</a></h1>
+</div>
+
+
+    
+    <div class = "footer">
+	
+        <p class="pcopy"><i>Shreeram Dhimal &copy; 2023 - All Rights Reserved</i></p>
+    
+        
+    
+    
+    
+    </div>
+            
+    </body>
+    </html>

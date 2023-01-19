@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+	<meta http-equiv='cache-control' content='no-cache'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta charset = "UTF-8">
+
+	<title>Home</title>
+
+	<!-- linking css -->
+	<link rel = "stylesheet" href = "css/css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="Javascript/js.js"></script>
+</head>
+    
+
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="pages/aboutus.html">About Us</a>
+        <a href="pages/contact.html">Contact</a>
+        
+      </div>
+
+      <div class="main" id="main" >
+            <span class="dropdownstyle" onclick="openNav()" ondblclick="closeNav()"><i class="fa fa-bars" style="font-size:24px"></i></span>
+            <marquee class="noticeboard" behavior="scroll" direction="left">Notice:  </marquee>
+            <p class="time" id="time"></p>
+	  			 			<script>
+								function currentDate(){
+								document.getElementById("time").innerHTML = new Date();
+								setTimeout(currentDate)
+								}
+								currentDate()
+							</script> 
+          
+      </div>
+  <div class="contents">
+  <div class="flightsdetails">
+    <h1>Flights available</h1>
+    <div class="image">
+      <div class="image__div">
+         <img src="./Images/air.png" style="width: 315px" >  
+      </div>
+       
+  </div>
+
+    <table class="flight">
+      <tr>
+         <th>From</th>
+         <th>TO</th>
+         <th>Date</th>
+         <th>Time</th>
+      </tr>
+      
+      <tr>
+         <td>Biratnagar </td>
+         <td>Kathmandu</td>
+         <td>17th January 2023</td>
+         <td>7:00 AM</td>
+      </tr>
+      
+      <tr>
+        <td>Kathmandu </td>
+        <td>Biratnagar</td>
+        <td>17th January 2023</td>
+        <td>8:00 AM</td>
+      </tr>
+      
+      <tr>
+        <td>Pokhara </td>
+        <td>Kathmandu</td>
+        <td>17th January 2023</td>
+        <td>7:00 AM</td>
+      </tr>
+      <tr>
+        <td>Lukla </td>
+        <td>Kathmandu</td>
+        <td>17th January 2023</td>
+        <td>7:00 AM</td>
+      </tr>
+      <tr>
+        <td>Pokhara </td>
+        <td>Lukla</td>
+        <td>17th January 2023</td>
+        <td>7:00 AM</td>
+      </tr>
+   </table>
+   <div class="btn__div">
+    <div class = "buttons1">
+      <button class="button-index" onclick="openForm()"><b>Search Flights</b></button></a>
+      </div>
+</div>
+      <div class="slogan">
+        <!-- <p>This is the description of the company.</p> -->
+       </div>
+   </div>
+</div>
+
+
+<div class="form-popup" id="myForm">
+  <form  class="form-container">
+    <h1 class="headertext">Search Flight</h1>
+    <div class="f">
+    <label for="from"><b class="from">From</b></label>
+    <select class="fromselect" id="fromplace" name="fromplace">
+      <option value="kathmandu"><b class="formtext">kathmandu</b></option>
+      <option value="biratnagar"><b class="formtext">Biratnagar</b></option>
+      <option value="lukla"><b class="formtext">Lukla</b></option>
+    </select>
+  </div>
+  <div class="g">
+    <label for="to"><b class="totext">To</b></label>
+    <select class="toselect" id="toplcae" name="toplace">
+      <option value="kathmandu"><p class="formtext">kathmandu</p></option>
+      <option value="biratnagar"><b class="formtext">Biratnagar</b></option>
+      <option value="lukla"><b class="formtext">Lukla</b></option>
+    </select>
+    </div>
+
+   
+  <div class="wholevutton">
+    <div class="btnsearch">
+    <button type="submit" class="btn"  >Search</button>
+    </div>
+<div class="btnclose">
+    <button type="button" class="btncancel" onclick="closeForm()">Close</button>
+  </div>
+  </div>
+</form>
+</div>
+
+
+  <div class = "footer">
+	
+    <p class="pcopy"><i>Footer &copy; 2023 - All Rights Reserved</i></p>
+
+   
+
+
+
+</div>
+
+
+</body>
+</html>
